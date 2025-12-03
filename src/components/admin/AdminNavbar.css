@@ -1,0 +1,122 @@
+.admin-navbar {
+  background: linear-gradient(135deg, #6B4C93 0%, #5A3D7A 100%);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.admin-nav-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-nav-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.admin-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admin-nav-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-nav-link {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.admin-nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.admin-nav-link.active {
+  background: white;
+  color: #6B4C93;
+  border-color: white;
+}
+
+.admin-nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-home-btn,
+.admin-logout-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.admin-home-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.admin-home-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.admin-logout-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #6B4C93;
+}
+
+.admin-logout-btn:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+  .admin-navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .admin-nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-navbar {
+    padding: 10px 15px;
+  }
+
+  .admin-nav-link {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

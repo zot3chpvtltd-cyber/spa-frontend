@@ -1,0 +1,321 @@
+.bookings-management {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 100px);
+}
+
+.bookings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bookings-header h1 {
+  font-size: 36px;
+  color: #333;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.book-appointment-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #6B4C93 0%, #5A3D7A 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-appointment-btn:hover {
+  background: linear-gradient(135deg, #5A3D7A 0%, #6B4C93 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(107, 76, 147, 0.4);
+}
+
+.download-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.date-filter-select {
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: white;
+}
+
+.download-excel-btn {
+  padding: 10px 20px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-excel-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.book-appointment-form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.book-appointment-form-container h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.book-appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #6B4C93;
+  box-shadow: 0 0 0 3px rgba(107, 76, 147, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.submit-btn {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #6B4C93 0%, #5A3D7A 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #5A3D7A 0%, #6B4C93 100%);
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  padding: 12px 30px;
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #d0d0d0;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  padding: 10px 20px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  border-color: #6B4C93;
+  color: #6B4C93;
+}
+
+.filter-buttons button.active {
+  background: linear-gradient(135deg, #6B4C93 0%, #5A3D7A 100%);
+  color: white;
+  border-color: #6B4C93;
+}
+
+.bookings-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bookings-table thead {
+  background: linear-gradient(135deg, #6B4C93 0%, #5A3D7A 100%);
+  color: white;
+}
+
+.bookings-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.bookings-table td {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #333;
+}
+
+.bookings-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.status-select {
+  padding: 6px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.status-select.status-pending {
+  color: #f59e0b;
+  border-color: #f59e0b;
+}
+
+.status-select.status-confirmed {
+  color: #10b981;
+  border-color: #10b981;
+}
+
+.status-select.status-completed {
+  color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.status-select.status-cancelled {
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+.empty-state {
+  background: white;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.empty-state p {
+  color: #777;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .bookings-management {
+    padding: 20px;
+  }
+
+  .bookings-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bookings-table {
+    font-size: 12px;
+  }
+
+  .bookings-table th,
+  .bookings-table td {
+    padding: 10px 8px;
+  }
+}
+

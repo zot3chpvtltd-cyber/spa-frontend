@@ -1,0 +1,260 @@
+.membership-page {
+  min-height: 100vh;
+  padding: 100px 40px 200px;
+  background: linear-gradient(180deg, #ffffff 0%, #F5F5DC 100%);
+  margin-top: 0;
+}
+
+.membership-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.membership-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.membership-subtitle {
+  font-size: 20px;
+  color: #777;
+  margin: 0;
+}
+
+.membership-plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.membership-card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  border: 3px solid transparent;
+}
+
+.membership-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.membership-card.popular {
+  border-color: #6B4C93;
+  transform: scale(1.05);
+}
+
+.membership-card.selected {
+  border-color: #10b981;
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: linear-gradient(135deg, #6B4C93 0%, #5A3D7A 100%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(107, 76, 147, 0.4);
+}
+
+.membership-card h2 {
+  font-size: 28px;
+  color: #333;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.price-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.currency {
+  font-size: 24px;
+  color: #6B4C93;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.amount {
+  font-size: 48px;
+  color: #6B4C93;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.original-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.strike {
+  font-size: 18px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.discount {
+  font-size: 16px;
+  color: #10b981;
+  font-weight: 600;
+  background: #f0fdf4;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.duration {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.features li {
+  padding: 12px 0;
+  color: #555;
+  font-size: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.features li:last-child {
+  border-bottom: none;
+}
+
+.check-icon {
+  color: #10b981;
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.select-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #6B4C93 0%, #5A3D7A 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.select-btn:hover {
+  background: linear-gradient(135deg, #5A3D7A 0%, #6B4C93 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(107, 76, 147, 0.4);
+}
+
+.select-btn.selected {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.membership-cta {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.selected-plan-info h3 {
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.selected-plan-info p {
+  font-size: 18px;
+  color: #6B4C93;
+  font-weight: 600;
+  margin: 0;
+}
+
+.book-membership-btn {
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #6B4C93 0%, #5A3D7A 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(107, 76, 147, 0.3);
+}
+
+.book-membership-btn:hover {
+  background: linear-gradient(135deg, #5A3D7A 0%, #6B4C93 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(107, 76, 147, 0.5);
+}
+
+@media (max-width: 768px) {
+  .membership-page {
+    padding: 100px 20px 40px;
+  }
+
+  .membership-header h1 {
+    font-size: 36px;
+  }
+
+  .membership-plans {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .membership-card.popular {
+    transform: scale(1);
+  }
+
+  .membership-cta {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .book-membership-btn {
+    width: 100%;
+  }
+}
