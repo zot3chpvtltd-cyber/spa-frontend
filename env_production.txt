@@ -1,0 +1,10 @@
+# Hostinger Production Configuration
+# You do NOT upload this file.
+# Instead, you must set this variable BEFORE building your React app.
+
+# Run this command in your terminal before 'npm run build':
+# Windows (PowerShell):
+# $env:REACT_APP_API_URL="https://thestoneedgespa.com/api"
+
+# Or create a .env.production file locally with this content:
+REACT_APP_API_URL=https://thestoneedgespa.com/api

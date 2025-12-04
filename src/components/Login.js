@@ -19,9 +19,9 @@ function Login() {
             const user = await login(email, password);
             toast.success(`Welcome back, ${user.fullName}!`);
 
-            if (user.role === 'MasterAdmin') {
-                navigate('/master-admin');
-            } else if (user.role === 'Admin') {
+            if (user.role === 'master_admin') {
+                navigate('/master-admin/dashboard');
+            } else if (user.role === 'spa_admin') {
                 navigate('/admin/dashboard');
             } else {
                 navigate('/');

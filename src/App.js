@@ -24,6 +24,7 @@ import MasterAdminDashboard from "./components/admin/MasterAdminDashboard";
 import Login from "./components/Login";
 import ForgotPassword from "./components/ForgotPassword";
 import ResetPassword from "./components/ResetPassword";
+import ProtectedRoute from "./components/ProtectedRoute";
 import "./App.css";
 import "./components/ScrollbarUtilities.css";
 
@@ -49,7 +50,11 @@ function App() {
           <Route path="/reset-password" element={<ResetPassword />} />
 
           {/* Admin Routes with Sidebar */}
-          <Route path="/admin" element={<AdminLayout />}>
+          <Route path="/admin" element={
+            <ProtectedRoute allowedRoles={['spa_admin', 'master_admin']}>
+              <AdminLayout />
+            </ProtectedRoute>
+          }>
             <Route index element={<AdminDashboard />} />
             <Route path="dashboard" element={<AdminDashboard />} />
             <Route path="bookings" element={<BookingsManagement />} />
@@ -61,7 +66,16 @@ function App() {
             <Route path="reviews" element={<ReviewsManagement />} />
           </Route>
 
-          <Route path="/master-admin" element={<MasterAdminDashboard />} />
+          {/* Master Admin Routes */}
+          <Route path="/master-admin" element={
+            <ProtectedRoute allowedRoles={['master_admin']}>
+              <AdminLayout />
+            </ProtectedRoute>
+          }>
+            <Route index element={<MasterAdminDashboard />} />
+            <Route path="dashboard" element={<MasterAdminDashboard />} />
+          </Route>
+          <Route path="/master-admin/login" element={<Login />} />
         </Routes>
         <Footer />
         <WhatsAppButton />
