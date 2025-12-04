@@ -82,7 +82,12 @@ function Login() {
                 </form>
 
                 <div className="login-footer">
-                    <p>Don't have an account? Contact Master Admin.</p>
+                    <p>Don't have an account?</p>
+                    <p style={{ marginTop: '10px', fontSize: '14px' }}>
+                        Contact Master Admin:<br />
+                        📧 <a href="mailto:zot3chpvtltd@gmail.com" style={{ color: '#6B4C93', textDecoration: 'none' }}>zot3chpvtltd@gmail.com</a><br />
+                        📞 <a href="tel:+918401753546" style={{ color: '#6B4C93', textDecoration: 'none' }}>+91 84017 53546</a>
+                    </p>
                 </div>
             </div>
         </div>

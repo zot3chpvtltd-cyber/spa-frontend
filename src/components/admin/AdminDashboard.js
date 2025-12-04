@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import api from "../../services/api";
 import "./AdminDashboard.css";
 
 function AdminDashboard() {
@@ -8,19 +9,30 @@ function AdminDashboard() {
     totalServices: 0,
     totalReviews: 0
   });
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Load data from localStorage
-    const bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
-    const services = JSON.parse(localStorage.getItem("services") || "[]");
-    const reviews = JSON.parse(localStorage.getItem("reviews") || "[]");
+    const fetchDashboardData = async () => {
+      try {
+        setLoading(true);
+        // Fetch dashboard stats from API
+        const response = await api.get('/admin/dashboard');
+        setStats(response.data);
+      } catch (error) {
+        console.error('Error fetching dashboard data:', error);
+        // Fallback to default values on error
+        setStats({
+          totalBookings: 0,
+          pendingBookings: 0,
+          totalServices: 0,
+          totalReviews: 0
+        });
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    setStats({
-      totalBookings: bookings.length,
-      pendingBookings: bookings.filter(b => b.status === "pending").length,
-      totalServices: services.length || 6, // Default to 6 if no services in storage
-      totalReviews: reviews.length || 3 // Default to 3 if no reviews in storage
-    });
+    fetchDashboardData();
   }, []);
 
   return (

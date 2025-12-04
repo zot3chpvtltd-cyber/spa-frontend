@@ -5,7 +5,7 @@ import "./AdminNavbar.css";
 function AdminNavbar() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { logout } = useAuth();
+  const { logout, user } = useAuth();
 
   const handleLogout = () => {
     logout();
@@ -16,11 +16,14 @@ function AdminNavbar() {
     return location.pathname === path ? "active" : "";
   };
 
+  // Check if user is Master Admin
+  const isMasterAdmin = user?.role === 'master_admin';
+
   return (
     <nav className="admin-navbar">
       <div className="admin-nav-header">
-        <h2>The Stone Edge Spa</h2>
-        <span className="admin-badge">Admin Panel</span>
+        <h2>{isMasterAdmin ? 'ZOT3CH' : 'The Stone Edge Spa'}</h2>
+        <span className="admin-badge">{isMasterAdmin ? 'Master Admin' : 'Admin Panel'}</span>
       </div>
 
       <div className="admin-nav-links">
