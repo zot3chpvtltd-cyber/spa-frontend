@@ -78,7 +78,7 @@ function Navbar() {
                 <NavLink to="/#reviews" onClick={toggleMenu}>Reviews</NavLink>
               )}
             </li>
-            <li>
+            {/* <li>
               <NavLink
                 to="/membership"
                 onClick={toggleMenu}
@@ -86,7 +86,7 @@ function Navbar() {
               >
                 Membership
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink
                 to="/book"

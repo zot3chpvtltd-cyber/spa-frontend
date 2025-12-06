@@ -44,7 +44,7 @@ function App() {
           } />
           <Route path="/book" element={<BookNow />} />
           <Route path="/book/:serviceId" element={<BookNow />} />
-          <Route path="/membership" element={<Membership />} />
+          {/* <Route path="/membership" element={<Membership />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />

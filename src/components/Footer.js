@@ -12,9 +12,8 @@ function Footer() {
                 </div>
                 <div className="footer-section">
                     <h3>Contact Us</h3>
-                    <p>Phone: +91 98765 43210</p>
-                    <p>Email: info@thaispa.com</p>
-                    <p>Address: 123 Wellness Street, City</p>
+                    <p>Phone: +91 7487 095 947</p>
+                    <p>Email: thestoneedgespapvtltd@gmail.com</p>
                 </div>
                 <div className="footer-section">
                     <h3>Opening Hours</h3>
